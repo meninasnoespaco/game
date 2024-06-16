@@ -1,0 +1,118 @@
+body {
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.login__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.login__header img {
+    width: 250px;
+}
+
+.login__header h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.login__header h4 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.login__input {
+    border: 2px solid black;
+    border-radius: 8px;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 15px;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+}
+
+.login__button {
+    background-color: #ff2d75;
+    border-radius: 8px;
+    color: #ffff;
+    cursor: pointer;
+    font-size: 1em;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+}
+
+.login__button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+}
+
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 7px #ff2d75,
+        0 0 10px #ff2d75,
+        0 0 21px #ff2d75,
+        0 0 42px #ff2d75,
+        0 0 82px #ff2d75,
+        0 0 92px #ff2d75,
+        0 0 102px #ff2d75,
+        0 0 151px #ff2d75;
+  }
